@@ -1,0 +1,25 @@
+package exercise;
+
+import java.util.Scanner;
+
+class OddEven {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int a;
+		
+		Scanner b = new Scanner(System.in);
+		
+		
+		System.out.print("Enter an integer: ");
+		a=b.nextInt();
+
+		if(a%5 != 0)
+			System.out.println("The number is Odd");
+		else if (a%2 ==0)
+			System.out.println("The number is Even");
+
+	}
+
+}
