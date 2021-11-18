@@ -1,0 +1,63 @@
+package exercise;
+
+import java.util.Scanner;
+
+public class Marks {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String sub1, sub2;
+		double marks1, marks2;
+		double avg;
+		
+		Scanner a = new Scanner(System.in);
+		
+		System.out.println("Subjek 1: ");
+		sub1=a.next();
+		System.out.print("Markah subjek 1: ");
+		marks1=a.nextInt();
+		System.out.println("Subjek 2: ");
+		sub2=a.next();
+		System.out.print("Markah subjek 2: ");
+		marks2=a.nextInt();
+		
+		{ // Nyatakan subjek mana yang lebih besar markah dan mana yang lebih kecil
+		if (marks1>marks2)
+		{
+			System.out.println("Subjek yang dapat markah tertinggi: "+ sub1);
+			System.out.println("Subjek yang dapat markah terendah: "+ sub2);
+		}
+		else 
+		{
+			System.out.println("Subjek yang dapat markah tertinggi: "+ sub2);
+			System.out.println("Subjek yang dapat markah terendah: "+ sub1);
+		}
+		}
+		{//Nyatakan subjek yang mempunyai markah lebih besar daripada 50, calon di kira lulus
+			if((marks1>=51)&&(marks2>=51))
+				System.out.println(sub1 +" "+sub2+" adalah melebihi 50 markah, maka calon dikira lulus");
+			else if((marks1>=51)&&(marks2<=50))
+				{System.out.println(sub1 +" adalah melebihi 50 markah, maka calon dikira lulus");
+				System.out.println(sub2 +" adalah subjek yang gagal");}
+			else if((marks1<=51)&&(marks2>=50))
+				{System.out.println(sub2 +" adalah melebihi 50 markah, maka calon dikira lulus");
+				System.out.println(sub1 +" adalah subjek yang gagal");}
+		}
+		
+		avg=(marks1+marks1)/2;
+		
+		{//  Kira purata markah. Markah 80-100 adalah Gred A, 
+			//markah 60-79 adalah Gred B dan markah 50-59 adalah gred C. Lain2 markah adalah Gagal
+			if((avg>=80)&&(avg<=100))
+				System.out.println("Grade A");
+			else if((avg<80)&&(avg>59))
+				System.out.println("Grade B");
+			else if((avg<60)&&(avg>49))
+				System.out.println("Grade C");
+			else
+				System.out.println("Failed");
+		}
+	}
+
+}
